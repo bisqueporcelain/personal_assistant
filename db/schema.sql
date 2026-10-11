@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS conversations (
     -- one course's thread separate from another's.
     thread_key      TEXT        NOT NULL UNIQUE,
     -- The SDK session to resume. Null until the first turn completes, and
-    -- rewritten on every turn: forking or compaction can change it.
+    -- rewritten on every turn: forking or compaction can change it.w
     sdk_session_id  TEXT,
     title           TEXT,
     created_at      TIMESTAMPTZ NOT NULL DEFAULT now(),

@@ -9,7 +9,9 @@ ongoing_processes/
 
 # ---- Personal notes and documents ----
 # Course content, transcripts, grades, advising/medical correspondence, drafts.
+# TODO.md is the author's working list, not part of the shared design.
 *.local.md
+/TODO.md
 personal/
 notes/
 documents/
