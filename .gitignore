@@ -1,0 +1,94 @@
+# This repository is public. Nothing below describes how the agent works —
+# it is all personal course material, private notes, or local environment.
+# Rule of thumb: system design (agent code, generalized skills, docs about the
+# architecture) is tracked. Anything specific to one person's semester is not.
+
+# ---- Personal course material ----
+syllabi/
+ongoing_processes/
+
+# ---- Personal notes and documents ----
+# Course content, transcripts, grades, advising/medical correspondence, drafts.
+*.local.md
+personal/
+notes/
+documents/
+
+# ---- User-supplied writing samples ----
+# Each user drops their own samples here; the writing skill reads them to
+# calibrate critique. The derived voicree profile is personal too. The folder
+# shape and instructions are tracked so a fresh clone knows where they go.
+writing_samples/*
+!writing_samples/.gitkeep
+!writing_samples/README.md
+
+# ---- Per-course data ----
+# One file per course: instructor, meeting times, grade weights, rubrics,
+# deadlines, integrity clauses. The schema is tracked; the facts are not.
+courses/*
+!courses/EXAMPLE.md
+
+# ---- Personal skill additions ----
+# The skills themselves are method-only and tracked — they are the shareable
+# part of this project. These are the private per-user extensions they read.
+.claude/skills/**/local.md
+.claude/skills/**/personal/
+
+# ---- Local Claude Code config ----
+# Whitelist, not blacklist: only skills are public. Claude Code accumulates
+# local state here over time (agents, commands, session scratch), and an
+# ignore-by-exception rule commits each new kind silently.
+.claude/*
+!.claude/skills/
+.claude/settings.local.json
+
+# ---- Python environment ----
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# ---- Secrets ----
+.env
+.env.*
+!.env.example
+*.pem
+credentials.json
+token.json
+
+# ---- Source documents dropped anywhere ----
+# Syllabus PDFs, essay drafts, exports, graded returns, screenshots. syllabi/
+# and writing_samples/ are already covered; this catches a stray Essay2.docx or
+# a Gradescope screenshot at the repo root. Un-ignore docs/ assets when needed.
+*.pdf
+*.docx
+*.doc
+*.pages
+*.key
+*.xlsx
+*.csv
+*.ipynb
+*.png
+*.jpg
+*.jpeg
+*.heic
+*.zip
+
+# ---- Transcripts and grades ----
+transcripts/
+grades/
+*.transcript.md
+
+# ---- Database ----
+# The schema is tracked (db/schema.sql); dumps and connection strings are not.
+# The DSN lives in .env, already ignored above.
+*.sql.gz
+*.dump
+pgdata/
+
+# ---- OS / editor ----
+.DS_Store
+.vscode/
+.idea/
+*.swp
